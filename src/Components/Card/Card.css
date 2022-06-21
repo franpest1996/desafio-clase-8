@@ -1,0 +1,11 @@
+.card{
+    width: 200px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    border-radius: .3rem;
+    border: 1px solid black;
+  }
+
+.card h2, p{
+    text-align: center;
+}

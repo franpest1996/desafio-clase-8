@@ -1,0 +1,9 @@
+{
+    "Productos":[
+        {"id": "1", "Producto": "Remera", "Talle": "S", "Precio": "900", "Stock":"5"},
+        {"id": "2", "Producto": "Pantalón", "Talle": "M", "Precio": "800", "Stock":"3"},
+        {"id": "3", "Producto": "Short", "Talle": "L", "Precio": "400", "Stock":"8"},
+        {"id": "4", "Producto": "Buzo", "Talle": "S", "Precio": "100", "Stock":"10"},
+        {"id": "5", "Producto": "Campera", "Talle": "XL", "Precio": "500", "Stock":"2"}
+    ]
+}

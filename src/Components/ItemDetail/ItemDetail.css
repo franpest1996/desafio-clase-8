@@ -1,0 +1,27 @@
+.detalle{
+    width: 12rem;
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.contador .resta{
+    width: 2.5rem;
+    background-color: black;
+    color: white;
+}
+
+.contador .suma{
+    width: 2.5rem;
+    background-color: black;
+    color: white;
+    
+}
+
+.agregar{
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+}
