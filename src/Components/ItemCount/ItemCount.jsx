@@ -3,6 +3,7 @@ import './ItemCount.css'
 
 function Contador({stock, initial, onAdd}) {
     const [count, setCount] = useState(initial);
+    
     //const [date, setDate] = useState(Date());
 
     function suma() {
@@ -19,8 +20,9 @@ function Contador({stock, initial, onAdd}) {
         }
     }
 
-    function agregar() {
-        alert('Se agregaron ' + count + ' artículos al carrito')
+    const agregar = () => {
+        onAdd(count)
+        // 
     } 
 
     //<p>Fecha: {date}</p>

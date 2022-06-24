@@ -3,6 +3,10 @@ import Contador from "../ItemCount/ItemCount"
 
 
 const Item = ({producto}) =>{
+    const onAdd = (cant) => {
+        console.log(cant)
+    }
+
     return(
         <div className="item" >
             <img src="../../../Assets/images/boca.jpg" alt="" />
@@ -12,7 +16,7 @@ const Item = ({producto}) =>{
             <p>Id: {producto.Id}</p>
             <Link to={`/info/${producto.Id}`}><button className="info">Información del Producto</button></Link>
             
-            <Contador className="contador" stock={producto.Stock} initial={1}/>
+            <Contador className="contador" stock={producto.Stock} initial={1} onAdd={onAdd}/>
         </div>
     )
 }
