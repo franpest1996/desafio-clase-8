@@ -6,6 +6,7 @@ function Cart() {
 
     const { cart, vaciar } = useContext(CartContext)
 
+    
     return(
         <div>
             <h2>Carrito</h2>
@@ -16,6 +17,7 @@ function Cart() {
                     </li> )
                 }
             </ul>
+            <p>Total: $</p>
             <div>
                 <button onClick={vaciar}>Vaciar Carrito</button>
             </div>

@@ -9,7 +9,7 @@ const ItemDetail = ({producto}) => {
     console.log('AAAA',cant)
     addToCart({...producto, cantidad: cant})
   }
-
+  
 console.log(cart)
 
   return(
