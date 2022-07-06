@@ -4,8 +4,26 @@ import { CartContext } from "../../Context/CartContext"
 
 function Cart() {
 
-    const { cart, vaciar } = useContext(CartContext)
+    const { cart, vaciar} = useContext(CartContext)
 
+    // function generarOrden(e){
+    //     e.preventDefault()
+    //     let orden = {}
+
+    //     orden.buyer = {Nombre:'Francisco', Apellido:'Peterson', Mail:'fp@gmail.com', Cel:'123456789'}
+    //     orden.total = precioTotal()
+
+    //     orden.items = cart.map(cartItem => {
+    //         const id = cartItem.Id
+    //         const nombre = cartItem.Nombre
+    //         const precio = cartItem.price + cart.cantidad
+
+    //         return{id, nombre, precio}
+    //     })
+
+    // console,log(orden)
+
+    // }
     
     return(
         <div>
@@ -20,6 +38,7 @@ function Cart() {
             <p>Total: $</p>
             <div>
                 <button onClick={vaciar}>Vaciar Carrito</button>
+                <button >Comprar</button>
             </div>
         </div>
     )

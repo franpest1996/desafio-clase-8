@@ -4,11 +4,8 @@ import Contador from "../ItemCount/ItemCount"
 import './ItemDetail.css'
 
 const ItemDetail = ({producto}) => {
-  const { cart, addToCart } = useContext(CartContext)
-  const onAdd = (cant) => {
-    console.log('AAAA',cant)
-    addToCart({...producto, cantidad: cant})
-  }
+  const { cart} = useContext(CartContext)
+  
   
 console.log(cart)
 
@@ -18,7 +15,7 @@ console.log(cart)
       <p>{producto.Producto}</p>
       <p>Talle: {producto.Talle}</p>
       <p>Precio: {producto.Precio}</p>
-      <Contador stock={producto.Stock} initial={1} onAdd={onAdd}/>
+      <Contador data={producto} stock={producto.Stock} initial={1}/>
     </div>
   )
 }

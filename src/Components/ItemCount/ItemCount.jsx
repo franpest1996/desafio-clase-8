@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useContext } from "react"
+import { CartContext } from "../../Context/CartContext"
 import './ItemCount.css'
 
-function Contador({stock, initial, onAdd}) {
+function Contador({stock, initial, data, onAdd}) {
     const [count, setCount] = useState(initial);
-    
+    const { addToCart } = useContext(CartContext)
     //const [date, setDate] = useState(Date());
 
     function suma() {
@@ -20,12 +22,18 @@ function Contador({stock, initial, onAdd}) {
         }
     }
 
-    const agregar = () => {
-        onAdd(count)
-        // 
-    } 
+    // const agregar = () => {
+    //     onAdd(count)
+    //     // 
+    // } 
 
-    //<p>Fecha: {date}</p>
+    function handleSubmit(){
+        addToCart({
+            quantity: count,
+            producto: data
+        })
+        onAdd(true)
+    }
 
     return (
         <div className='contadorAgregar'>
@@ -34,7 +42,7 @@ function Contador({stock, initial, onAdd}) {
                 <p>{count}</p>
                 <button className='resta' onClick={resta}>-</button>
             </div>
-            <button className='agregar' onClick={agregar}>Agregar al carrito</button>
+            <button className='agregar' onClick={handleSubmit}>Agregar al carrito</button>
         </div>
     )
 }

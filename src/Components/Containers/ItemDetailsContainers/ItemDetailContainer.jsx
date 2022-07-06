@@ -13,19 +13,19 @@ const ItemDetailContainer = () => {
   console.log(id)
 
   //Para traer uno
-  useEffect(()=>{
-  const db = getFirestore();
-  const queryItem = doc(db, 'productos', '0vGYDj0WqTDBY9jQn1Oo' )
-  getDoc(queryItem)
-  .then(resp => setProducto( {id: resp.id, ...resp.data} ))
-  }, [bool])
+  // useEffect(()=>{
+  // const db = getFirestore();
+  // const queryItem = doc(db, 'productos', '0vGYDj0WqTDBY9jQn1Oo' )
+  // getDoc(queryItem)
+  // .then(resp => setProducto( {id: resp.id, ...resp.data} ))
+  // }, [bool])
 
 
-  // useEffect(() => {
-  //   getFetch()
-  //   .then((resp) => setProducto(resp.find(prod => prod.Id === id)))
-  //   .catch(error => console.log(error)) 
-  // }, [])
+   useEffect(() => {
+     getFetch()
+     .then((resp) => setProducto(resp.find(prod => prod.Id === id)))
+     .catch(error => console.log(error)) 
+   }, [])
   return <ItemDetail producto={producto}/>
   
 }
