@@ -13,43 +13,34 @@ const ItemListContainer = ()=>{
     const {categoria} = useParams()
     console.log(categoria)
 
-    // Para traer uno
+    //Para traer todos 
     // useEffect(()=>{
     //     const db = getFirestore();
-    //     const queryItem = doc(db, 'Productos', '0vGYDj0WqTDBY9jQn1Oo' )
-    //     getDoc(queryItem)
-    //     .then(resp => setProductos( {id: resp.id, ...resp.data} ))
-    // }, [bool])
-    
+    //     const queryCollection = collection(db, 'productos')
+    //     getDocs(queryCollection)
+    //     .then(resp => setProductos(resp.docs.map(producto => ({ id: producto.id, ...producto.data()}) )))
+    //     .catch(error=>console.log(error))
+    //     .finally(()=>setLoading(false))
+    // }, [])
 
-    //Para traer todos 
-    useEffect(()=>{
-        const db = getFirestore();
-        const queryCollection = collection(db, 'productos')
-        getDocs(queryCollection)
-        .then(resp => setProductos(resp.docs.map(producto => ({ id: producto.id, ...producto.data()}) )))
-        .catch(error=>console.log(error))
-        .finally(()=>setLoading(false))
-    }, [])
-
-    console.log(productos)
+    // console.log(productos)
 
     
     
     
-    // useEffect(()=>{
-    //     if (categoria) {
-    //         getFetch()
-    //         .then((resp)=>setProductos(resp.filter(producto => producto.Categoria === categoria)))
-    //         .catch(error=>console.log(error)) 
-    //         .finally(()=>setLoading(false))
-    //     } else {
-    //         getFetch()
-    //         .then((resp)=>setProductos(resp))
-    //         .catch(error=>console.log(error)) 
-    //         .finally(()=>setLoading(false))
-    //     }               
-    // }, [categoria])
+     useEffect(()=>{
+         if (categoria) {
+             getFetch()
+             .then((resp)=>setProductos(resp.filter(producto => producto.Categoria === categoria)))
+             .catch(error=>console.log(error)) 
+             .finally(()=>setLoading(false))
+         } else {
+             getFetch()
+             .then((resp)=>setProductos(resp))
+             .catch(error=>console.log(error)) 
+             .finally(()=>setLoading(false))
+         }               
+     }, [categoria])
 
     return(
         <div>
