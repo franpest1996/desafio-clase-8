@@ -21,7 +21,7 @@ console.log(cart)
             </>
               : 
                           
-              <Contador data={producto} onAdd={setAddedToCart} stock={producto.Stock} initial={1}/>
+              <Contador producto={producto}  onAdd={setAddedToCart} stock={producto.Stock} initial={1}/>
             
 
             }

@@ -3,7 +3,7 @@ import { useContext } from "react"
 import { CartContext } from "../../Context/CartContext"
 import './ItemCount.css'
 
-function Contador({stock, initial, producto, onAdd}) {
+function Contador({stock, initial, data, onAdd}) {
     const [count, setCount] = useState(initial);
     const { addToCart } = useContext(CartContext)
     //const [date, setDate] = useState(Date());
@@ -30,7 +30,7 @@ function Contador({stock, initial, producto, onAdd}) {
     function handleSubmit(){
         addToCart({
             quantity: count,
-            product: producto
+            product: data
         })
         onAdd(true)
     }
