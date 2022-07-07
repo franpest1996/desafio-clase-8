@@ -4,7 +4,7 @@ import { CartContext } from "../../Context/CartContext"
 
 function Cart() {
 
-    const { cart, vaciar} = useContext(CartContext)
+    const { cart, vaciar, totalPrice} = useContext(CartContext)
 
     // function generarOrden(e){
     //     e.preventDefault()
@@ -30,12 +30,12 @@ function Cart() {
             <h2>Carrito</h2>
             <ul>
                 {
-                    cart.map(item => <li key={item.Id}>
-                        Nombre: {item.Producto} Talle: {item.Talle} Precio: {item.Precio} Cantidad: {item.cantidad}
+                    cart.map(item => <li  key={item.Id}>
+                        Nombre: {item.product.Producto} Talle: {item.product.Talle} Precio: {item.product.Precio} Cantidad: {item.quantity}
                     </li> )
                 }
             </ul>
-            <p>Total: $</p>
+            <p>Total: ${totalPrice()}</p>
             <div>
                 <button onClick={vaciar}>Vaciar Carrito</button>
                 <button >Comprar</button>

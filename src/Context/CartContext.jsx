@@ -13,16 +13,16 @@ export const CartContextProvider = ({children}) => {
     //     ])
     // }
 
-    const addToCart = (producto) => {
+    const addToCart = (objproducto) => {
     
         let carritoprevio = [...cart];
         
-        if (carritoprevio.some((item) => item.product.Id === producto.product.Id)) 
+        if (carritoprevio.some((item) => item.product.Id === objproducto.product.Id)) 
         {
-          carritoprevio.find((item) => item.product.Id === producto.product.Id).quantity += producto.quantity;
+          carritoprevio.find((item) => item.product.Id === objproducto.product.Id).quantity += objproducto.quantity;
           setCart(carritoprevio);
         } else {
-          setCart([...cart, producto]);
+          setCart([...cart, objproducto]);
         }
        
     };
@@ -31,16 +31,16 @@ export const CartContextProvider = ({children}) => {
         setCart([])
     }
 
-    // const totalPrice = () => {
-    //     let total = 0;
+     const totalPrice = () => {
+         let total = 0;
     
-    //     cart.forEach((newProduct) => {
-    //       total +=
-    //         parseInt(newProduct.producto.Precio) * parseInt(newProduct.quantity);
-    //     });
+        cart.forEach((newProduct) => {
+           total +=
+             parseInt(newProduct.product.Precio) * parseInt(newProduct.quantity);
+         });
     
-    //     return parseInt(total);
-    // };
+         return parseInt(total);
+     };
     
     return(
         <CartContext.Provider value={{
@@ -48,6 +48,7 @@ export const CartContextProvider = ({children}) => {
             setCart,
             addToCart,
             vaciar,
+            totalPrice,
             
             
 
