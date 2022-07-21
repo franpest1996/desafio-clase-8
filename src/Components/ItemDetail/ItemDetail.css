@@ -1,10 +1,15 @@
+h2{
+    float: left;
+    margin: 1rem;
+}
+
 .detalle{
-    width: 12rem;
+    width: 100%;
     margin: auto;
     margin-top: 1rem;
     display: flex;
-    flex-direction: column;
-    border: 1px solid black;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .contador .resta{
@@ -24,4 +29,46 @@
     font-size: 1rem;
     background-color: black;
     color: white;
+}
+
+button .agregar{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+button .agregar:hover{
+    background-color: aliceblue;
+}
+
+.fotoProducto{
+    padding: 1rem;
+    width: 320px;
+    height: 350px;
+    border: 1px solid black;
+
+}
+
+link{
+    text-decoration: none;
+}
+
+button{
+    margin: .3rem;
+    background-color: white;
+    border-radius: .3rem;
+}
+
+button:hover{
+    background-color: aliceblue;
+}
+
+.botonesCart{
+    display: flex;
+    flex-direction: column;
+}
+
+.datosProductos{
+   margin-bottom: auto;
+   margin-top: auto;
 }

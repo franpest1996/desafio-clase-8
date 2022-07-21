@@ -11,22 +11,29 @@ const ItemDetail = ({producto}) => {
 console.log(cart)
 
   return(
-    <div className="detalle">
-      <h2>Detalle</h2>
-      <p>{producto.Producto}</p>
-      <p>Talle: {producto.Talle}</p>
-      <p>Precio: {producto.Precio}</p>
-      { addedToCart ? <>
-              <Link to="/cart"> Ir al Carrito </Link> 
-            </>
-              : 
-                          
-              <Contador producto={producto}  onAdd={setAddedToCart} stock={producto.Stock} initial={1}/>
-            
-
-            }
-      
-    </div>
+    <>
+      <h2>{producto.Producto}</h2>
+      <div className="detalle">
+        
+        <div>  
+          <img className="fotoProducto" src={`${producto.Img}`} alt="" />
+        </div>
+        <div className="datosProductos">
+          <p>Talle: {producto.Talle}</p>
+          <p>Precio: {producto.Precio}</p>
+          { addedToCart ? 
+                <>
+                  <div className="botonesCart">
+                    <button><Link className='agregar' to="/cart"> Ir al Carrito </Link></button>
+                    <button><Link className='agregar' to="/productos"> Seguir Comprando </Link></button>
+                  </div>
+                </>
+                  :     
+                  <Contador producto={producto}  onAdd={setAddedToCart} stock={producto.Stock} initial={1}/>
+                }
+        </div>
+      </div>
+    </>
   )
 }
 

@@ -5,22 +5,34 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    background-color: #020229;
 }
 
 .NavBar a{
-    width: 100%;
+    text-transform: uppercase;
     text-decoration: none;
     color: white;
-    
+    font-weight: bold;
 }
 
 .NavBar li{
     width: 100%;
-    padding: 1rem;
+    padding: .5rem;
     text-align: center;
-    background-color: darkblue;
+    background-color: #020229;
+    border-radius: .3rem;
 }
 
 .NavBar li:hover{
-    background-color: blue;
+    background-color: #03033d;
 }
+
+h1{
+    margin: 0 0 0 0rem;
+    padding: 1rem;
+    background-color: #08085a;
+    color: white;
+}
+

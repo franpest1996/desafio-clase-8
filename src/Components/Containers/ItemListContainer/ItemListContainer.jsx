@@ -43,12 +43,12 @@ const ItemListContainer = ()=>{
      }, [categoria])
 
     return(
-        <div>
+        <div className="container">
         <NavBarSecciones/>    
             <div className="itemList">
                 {loading ?
                         <p>Cargando...</p>
-                :    
+                :       
                         <ItemList productos={productos}/> 
                     
                 }

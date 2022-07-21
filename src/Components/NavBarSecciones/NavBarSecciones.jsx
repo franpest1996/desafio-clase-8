@@ -5,11 +5,11 @@ function NavBarSecciones() {
     return (
       <nav className='NavBarSecciones'>  
         <ul>
-            <li><NavLink to='/productos/Remeras'>Remeras</NavLink></li>
-            <li><NavLink to='/productos/Pantalones'>Pantalones</NavLink></li>
-            <li><NavLink to='/productos/Shorts'>Shorts</NavLink></li>
-            <li><NavLink to='/productos/Buzos'>Buzos</NavLink></li>
-            <li><NavLink to='/productos/Camperas'>Camperas</NavLink></li>
+            <NavLink to='/productos/Remeras'><li>Remeras</li></NavLink>
+            <NavLink to='/productos/Pantalones'><li>Pantalones</li></NavLink>
+            <NavLink to='/productos/Shorts'><li>Shorts</li></NavLink>
+            <NavLink to='/productos/Buzos'><li>Buzos</li></NavLink>
+            <NavLink to='/productos/Camperas'><li>Camperas</li></NavLink>
         </ul>
       </nav>
     )

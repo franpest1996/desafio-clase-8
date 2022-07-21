@@ -4,12 +4,13 @@ import './NavBar.css'
 
 function NavBar() {
     return (
-      <nav className='NavBar'>  
+      <nav className='NavBar'>
+        <h1>TodoBoca</h1>  
         <ul>
-            <li><NavLink to='/inicio'>Inicio</NavLink></li>
-            <li><NavLink to='/productos'>Productos</NavLink></li>
-            <li><NavLink to='/contacto'>Contacto</NavLink></li>
-            <li><NavLink to='/cart'><CartWidget/></NavLink></li>
+            <NavLink to='/inicio'><li>Inicio</li></NavLink>
+            <NavLink to='/productos'><li>Productos</li></NavLink>
+            <NavLink to='/contacto'><li>Contacto</li></NavLink>
+            <NavLink to='/cart'><li><CartWidget/></li></NavLink>
         </ul>
       </nav>
     )

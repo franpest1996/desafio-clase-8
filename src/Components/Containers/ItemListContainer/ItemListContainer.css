@@ -1,7 +1,13 @@
+.container{
+    background-color: #f6f7b7;
+}
+
 .item{
     width: 200px;
-    margin-top: 2rem;
-    margin-left: 2rem;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
     border-radius: .3rem;
     border: 1px solid black;
     display: flex;
@@ -20,6 +26,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    box-shadow: 0 0 1rem  gray;
+    border-radius: .5rem;
 }
 
 .item img{
@@ -33,3 +41,7 @@
     font-size: 1rem;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}

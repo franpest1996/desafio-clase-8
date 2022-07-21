@@ -9,18 +9,22 @@
 
 .NavBarSecciones a{
     width: 100%;
-    
     text-decoration: none;
     color: white;
-    
+    font-weight: bold;
 }
 
 .NavBarSecciones li{
     width: 100%;
     text-align: center;
-    background-color: black;
+    background-color: rgb(14, 12, 136);
+    padding: .2rem;
 }
 
 .NavBarSecciones li:hover{
-    background-color: blue;
+    background-color: rgb(1, 1, 161);
+}
+
+.NavBarSecciones{
+    margin: 0;
 }

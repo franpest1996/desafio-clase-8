@@ -41,6 +41,10 @@ export const CartContextProvider = ({children}) => {
     
          return parseInt(total);
      };
+
+     const removeProduct = (id) => {
+        setCart(cart.filter((newProduct) => newProduct.product.Id !== id));
+      };
     
     return(
         <CartContext.Provider value={{
@@ -49,9 +53,9 @@ export const CartContextProvider = ({children}) => {
             addToCart,
             vaciar,
             totalPrice,
+            removeProduct
             
             
-
         }} >
             {children}
         </CartContext.Provider>
